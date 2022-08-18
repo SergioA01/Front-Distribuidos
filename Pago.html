@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes U</title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/main.css">
+    <LINK rel="stylesheet"  href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+</head>
+<body style="margin: auto; padding: 15px" onload="mostrarPago()">
+    <!--<div id="container" type="conten" style="background: gainsboro; padding: 20px">-->
+        <header>
+            <div class="contenedor">
+                <h1>Administración</h1>
+                <input type="checkbox" name="" id="menu-bar">
+                <label  class="icon-menu" for="menu-bar"></label>
+                <nav class="menu" id="menu">
+                    <a href="index-1.html">Página principal</a>
+                    <label for="menu-bar" type="btnMenu" onclick="mostrarPago()" style="" class="btnPagos" id="btnPagos">Pago</label><br><br><hr>
+                    <label for="menu-bar" type="btnMenu" onclick="mostrarPerfil()" class="btnPerfil" id="btnPerfil">Perfil</label><br><br><hr>
+                    <label for="menu-bar" type="btnMenu" onclick="mostrarInmueble()" class="btnInmueble" id="btnInmueble">Inmueble</label><br><br><hr>
+                    <a href="index.html">Cerrar sesión</a>
+                </nav>
+            </div>
+        </header>
+
+        <!--ventana Perfil-->
+        <div class="overlayPerfil" id="overlayPerfil" >
+            <div class="popupPerfil" id="popupPerfil">
+                <div class="row">
+                    <div class="form-title">
+                        <h5>Perfil</h5>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h6 id="MiPerfil">INFORMACIÓN PERSONAL</h6>
+                    </div>
+
+                </div>
+
+
+                <div class="row" style="margin: 1em; background: #cbccce" id="ventas">
+
+                    <div class="col-12">
+                        <table class="table table-striped" id="tablePerfil">
+                            <thead>
+                            <tr>
+                                <th scope="col">Tipo de identificación</th>
+                                <th scope="col">N° de identificación</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Correo electrónico</th>
+                                <th scope="col">Telefono</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                            <tfoot>
+                            <th scope="col" id="average"></th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--ventana Pago-->
+        <div class="overlayPago" id="overlayPago">
+            <div class="popupPago" id="popupPago">
+
+                <div class="row">
+                    <div class="form-title">
+                        <h8>Pago</h8>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin: 1em; background: #AEB6BF" id="MiPago">
+                    <div class="col-3">
+                        <h4 style="text-align: left; margin-top: 28px; font-size: 28px">Descripción</h4>
+                    </div>
+
+                    <div class="col-9">
+                        <button type="submit2" class="form-input" onclick="pago()" >Pagar</button><br><br>
+                    </div>
+
+                    <div class="col-12">
+                        <table class="table table-striped" id="tablePago" >
+                            <thead>
+                            <tr>
+                                <th scope="col">ID del pago</th>
+                                <th scope="col">ID del inmueble</th>
+                                <th scope="col">Fecha del pago</th>
+                                <th scope="col">Valor</th>
+                            </tr>
+                            </thead>
+                            <tbody id="bodyActivity">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--ventana Perfil-->
+        <div class="overlayInmueble" id="overlayInmueble" >
+            <div class="popupInmueble" id="popupInmueble">
+                <div class="row">
+                    <div class="form-title">
+                        <h5>Inmueble</h5>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h6 id="inmueble">DESCRIPCIÓN</h6>
+                    </div>
+
+                </div>
+
+
+                <div class="row" style="margin: 1em; background: #cbccce" id="ventas">
+
+                    <div class="col-12">
+                        <table class="table table-striped" id="tableInmueble">
+                            <thead>
+                            <tr>
+                                <th scope="col">Identificador</th>
+                                <th scope="col">N° de apartamento</th>
+                                <th scope="col">N° de torre</th>
+                                <th scope="col">Dimensión</th>
+                                <th scope="col">Indice copropiedad</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                            <tfoot>
+                            <th scope="col" id="average"></th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    <script src="./js/jquery-3-6-0.js"></script>
+    <script src="./js/Scripts.js"></script>
+</body>
+</html>
